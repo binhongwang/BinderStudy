@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kobe.binderstudy">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".section4.Section4Activity"
+            android:label="4.SM的简单JAVA实现"></activity>
+        <activity
+            android:name=".section3.Section3Activity"
+            android:label="3.手写AIDL" />
+        <activity
+            android:name=".section2.Section2Activity"
+            android:label="2.最基本的Binder接口" />
+        <activity
+            android:name=".section1.Section1Activity"
+            android:label="1.AIDL初步使用" />
+
+        <service android:name=".section1.LocalService1" />
+        <service
+            android:name=".section1.RemoteService1"
+            android:process=":RemoteService1" />
+        <service
+            android:name=".section2.BasicService"
+            android:process=":RemoteService2" />
+        <service
+            android:name=".section3.MyAidlService"
+            android:process=":RemoteService3" />
+
+        <service
+            android:name=".section4.MyServiceManager"
+            android:process=":RemoteService4" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
